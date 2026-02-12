@@ -1,4 +1,4 @@
-let portionsmenge = 5;
+/* let portionsmenge = 5;
 
 let zutatenMenge = 200;
 
@@ -9,3 +9,11 @@ if (portionsmenge <= 0 ){
 } else {
     console.log(berechneteMenge = zutatenMenge * portionsmenge);
 }
+
+ */
+
+let zutaten = ["Kartoffel", "Zwiebel", "Drachenpulver"];
+let mengen = [200, 100, 1];
+let Einheit = ["Gramm", "Gramm", "Prise"];
+
+console.log(zutaten[0], mengen[0], Einheit[0]);
