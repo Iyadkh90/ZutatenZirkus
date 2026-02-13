@@ -14,6 +14,11 @@ if (portionsmenge <= 0 ){
 
 let zutaten = ["Kartoffel", "Zwiebel", "Drachenpulver"];
 let mengen = [200, 100, 1];
-let Einheit = ["Gramm", "Gramm", "Prise"];
+let einheit = ["Gramm", "Gramm", "Prise"];
 
-console.log(zutaten[0], mengen[0], Einheit[0]);
+/* console.log(zutaten[0], mengen[0], Einheit[0]); */
+
+let i=0;
+for (i=0; i<zutaten.length; i++){
+    console.log("Zutat" + ":" + zutaten[i] + "-" + mengen[i] + " " + einheit[0]);
+}
