@@ -45,6 +45,14 @@ body {
   border-radius: 15px 15px 0 0 ;
 }
 
+.drachen-heading-box{
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
+  justify-content: center;
+  gap: 10px;
+}
+
 .drachen-container p {
   text-align:start;
   background-color: #f9f2de;
@@ -168,6 +176,45 @@ body {
   
 }
 }
+
+/** Popup */
+.popup{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content{
+  background-color: #fff;
+  width: 500px;
+  position: relative;
+  border-radius: 15px;;
+  padding: 20px;
+}
+
+.close{
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.info-icon{
+  cursor: pointer;
+}
+
+
+
+
+
+
 
 /* Tablet */
 @media (min-width: 600px) {

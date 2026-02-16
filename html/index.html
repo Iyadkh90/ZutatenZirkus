@@ -6,6 +6,20 @@
     <title>ZutatenZirkus - Drachenatem-Curry</title>
     <link rel="stylesheet" href="/css/stylesheet.css">
 </head>
+
+<!-- Popup -->
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <span class="close">&times;</span>
+    <h3>Allergene (und andere übernatürliche Gefahren):</h3>
+    <ul>
+      <li><strong>Chili</strong> – Kann spontane Feuerspeiendeffekte verursachen.</li>
+      <li><strong>Ingwer</strong> – Wirkt wie ein Jetpack für deinen Kreislauf.</li>
+      <li><strong>Kokosmilch</strong> – Enthält Kokos.</li>
+      <li><strong>Knoblauch</strong> – Nicht allergen, aber vampirresistent.</li>
+    </ul>
+  </div>
+</div>
 <body>
     <header class="header">
         <h1>ZutatenZirkus</h1>
@@ -15,7 +29,11 @@
     <main class="main">
 
         <section class="drachen-container">
-            <h2>Drachenatem-Curry</h2>
+            <div class="drachen-heading-box">
+                <h2>Drachenatem-Curry</h2>
+                <span id="openPopup" class="info-icon">ⓘ</span>
+            </div>
+            
             <p>
             Dieses Curry ist nicht nur für mutige Esser gemacht, sondern bringt dein Abendessen auf Hochtouren. Mit seiner pikanten Chili-Note und dem wärmenden Ingwer wird jeder Bissen zu einer explosiven Geschmacksreise.
             Das Beste daran? Dein Atem wird so feurig sein, dass selbst Drachen neidisch werden würden!
