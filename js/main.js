@@ -34,3 +34,33 @@ openBtn.addEventListener("click", function() {
 closeBtn.addEventListener("click", function() {
     popup.style.display="none";
 })
+
+let zutaten = ["Huhn", "Currypulver", "Kokosmilch", "Ingwer", "Zwiebel", "Reis", "Zitronensaft", "Chili"];
+let mengen = [1, 10, 250, 2, 1, 200, 20, 0.5];
+let einheiten = ["Stk.", "g", "ml", "ml", "Stk.", "g", "ml", "g"];
+
+let input = document.getElementById("portionInput");
+let liste = document.getElementById("zutatenListe");
+
+/* Rezept Anzeigen */
+function rezeptAnzeiger(portionen){
+    liste.innerHTML = "";
+    for (let i=0; i < zutaten.length; i++){
+        let neuMengen = mengen[i]*portionen;
+        liste.innerHTML += "<li>" + zutaten[i] + "<span>" + neuMengen + "" + einheiten[i]+"</span></li>";
+    }
+}
+
+/* Prüfung ob die Eingabe großer als 0*/
+
+input.addEventListener("change", function(){
+    let portionsmenge = parseInt(input.value);
+
+    if (portionsmenge <= 0){
+        alert("Die Eingabe ist ungültig!");
+        input.value = 1;
+        rezeptAnzeiger(1);
+    } else{ rezeptAnzeiger(portionsmenge);}
+});
+
+rezeptAnzeiger(1);
