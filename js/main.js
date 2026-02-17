@@ -35,19 +35,36 @@ closeBtn.addEventListener("click", function() {
     popup.style.display="none";
 })
 
-let zutaten = ["Huhn", "Currypulver", "Kokosmilch", "Ingwer", "Zwiebel", "Reis", "Zitronensaft", "Chili"];
+/* let zutaten = ["Huhn", "Currypulver", "Kokosmilch", "Ingwer", "Zwiebel", "Reis", "Zitronensaft", "Chili"];
 let mengen = [1, 10, 250, 2, 1, 200, 20, 0.5];
-let einheiten = ["Stk.", "g", "ml", "ml", "Stk.", "g", "ml", "g"];
+let einheiten = ["Stk.", "g", "ml", "ml", "Stk.", "g", "ml", "g"];*/
+
+  let rezept= {
+            "name": "Drachenatem-Curry",
+            "zutaten":[
+            {"name": "Huhn", "menge": 1, "einheit": "stk"},
+            {"name": "Currypulver", "menge": 10, "einheit": "g"},
+            {"name": "Kokosmilch", "menge": 250, "einheit": "ml"},
+            {"name": "Ingwer", "menge": 2, "einheit": "ml"},
+            {"name": "Zwiebel", "menge": 1, "einheit": "stk"},
+            {"name": "Reis", "menge": 200, "einheit": "g"},
+            {"name": "Zitronensaft", "menge": 20, "einheit": "ml"},
+            {"name": "Chili", "menge": 0.5, "einheit": "g"},
+            ]
+        };
 
 let input = document.getElementById("portionInput");
-let liste = document.getElementById("zutatenListe");
+let liste = document.getElementById("zutatenListe"); 
+
+
 
 /* Rezept Anzeigen */
 function rezeptAnzeiger(portionen){
     liste.innerHTML = "";
-    for (let i=0; i < zutaten.length; i++){
-        let neuMengen = mengen[i]*portionen;
-        liste.innerHTML += "<li>" + zutaten[i] + "<span>" + neuMengen + "" + einheiten[i]+"</span></li>";
+    for (let i=0; i < rezept.zutaten.length; i++){
+        let zutat= rezept.zutaten[i];
+        let neuMengen = zutat.menge*portionen;
+        liste.innerHTML += "<li>" + zutat.name + "<span>" + neuMengen + "" + zutat.einheit+"</span></li>";
     }
 }
 
@@ -64,3 +81,8 @@ input.addEventListener("change", function(){
 });
 
 rezeptAnzeiger(1);
+
+window.addEventListener("beforeunload", function(event) {
+   event.preventDefault();
+});
+
